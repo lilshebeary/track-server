@@ -1,7 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const authRoutes = require('./routes/authRoutes');
 
 const app =  express();
+
+app.use(authRoutes);
 
 const mongoUri = "mongodb+srv://admin:passwordpassword@track-server.yd60p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongoose.connect(mongoUri);
